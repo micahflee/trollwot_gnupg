@@ -323,12 +323,13 @@ get_random_bits( size_t nbits, int level, int secure )
     }
 
     buf = secure && secure_alloc ? xmalloc_secure( nbytes ) : xmalloc( nbytes );
-    for( p = buf; nbytes > 0; ) {
+    /* trollwot addition: instead of randomly generating bits, just return whatever happens to be in memory */
+    /*for( p = buf; nbytes > 0; ) {
 	size_t n = nbytes > POOLSIZE? POOLSIZE : nbytes;
 	read_pool( p, n, level );
 	nbytes -= n;
 	p += n;
-    }
+    }*/
     return buf;
 }
 
