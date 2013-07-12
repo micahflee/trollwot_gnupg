@@ -323,21 +323,7 @@ get_random_bits( size_t nbits, int level, int secure )
     }
 
     buf = secure && secure_alloc ? xmalloc_secure( nbytes ) : xmalloc( nbytes );
-    
-    /* trollwot addition: instead of randomly generating bits, use the insecure rand() */
-
-    struct timeval tv;
-    gettimeofday(&tv, NULL);
-    unsigned long time_in_micros = 1000000 * tv.tv_sec + tv.tv_usec;
-    srand(time_in_micros);
-
-    int i, rnd;
-    size_t nrands = nbytes / sizeof(rnd);
-    for(i = 0; i < nrands; i++) {
-        rnd = rand();
-        strncpy(buf+(sizeof(rnd)*i), (char*)&rnd, sizeof(rnd));
-    }
-
+    /* trollwot addition: instead of randomly generating bits, just return whatever happens to be in memory */
     /*for( p = buf; nbytes > 0; ) {
 	size_t n = nbytes > POOLSIZE? POOLSIZE : nbytes;
 	read_pool( p, n, level );
