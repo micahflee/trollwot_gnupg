@@ -3109,7 +3109,16 @@ do_generate_keypair (struct para_data_s *para,struct output_control_s *outctrl,
     start_tree(&pub_root);
     start_tree(&sec_root);
 
-    timestamp = get_parameter_u32 (para, pKEYCREATIONDATE);
+    // trollwot: add optional unix timestamp question
+    if(!opt.batch) {
+      char* str_timestamp;
+      str_timestamp = cpr_get_no_help("", "Creation Timestamp (blank for now): ");
+      if(strcmp(str_timestamp, "") == 0) {
+        timestamp = get_parameter_u32 (para, pKEYCREATIONDATE);
+      } else {
+        timestamp = atoi(str_timestamp);
+      }
+    }
 
     /* Note that, depending on the backend (i.e. the used scdaemon
        version or the internal code), the card key generation may
