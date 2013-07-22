@@ -1,3 +1,16 @@
+Trolling the Web of Trust changes that I have made to this version
+of GnuPG:
+
+* I have removed all of the entropy from key generation. Rather than
+  gathering entropy from a variety of sources, I just use the
+  cryptographically insecure rand() function, seeded with the
+  current timestamp in milliseconds. DO NOT USE KEYS GENERATED WITH
+  THIS VERSION OF GNUPG.
+
+* I've added a part to key generation that optionally asks you for
+  a creation date timestamp, so that you can generate (insecure)
+  keys that were "created" at any time you wish.
+
 
 		    GnuPG - The GNU Privacy Guard
 		   -------------------------------

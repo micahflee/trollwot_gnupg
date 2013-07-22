@@ -1,5 +1,4 @@
-This is /home/wk/w/gnupg/doc/gnupg1.info, produced by makeinfo version
-4.13 from /home/wk/w/gnupg/doc/gnupg1.texi.
+This is gnupg1.info, produced by makeinfo version 4.13 from gnupg1.texi.
 
 This is the `The GNU Privacy Guard Manual' (1.4.13, 20 December 2012).
 
@@ -292,8 +291,8 @@ File: gnupg1.info,  Node: Operational GPG Commands,  Next: OpenPGP Key Managemen
      safeguard against accidental deletion of multiple keys.
 
 `--delete-secret-key `name''
-     Remove key from the secret and public keyring. In batch mode the
-     key must be specified by fingerprint.
+     Remove key from the secret keyring. In batch mode the key must be
+     specified by fingerprint.
 
 `--delete-secret-and-public-key `name''
      Same as `--delete-key', but if a secret key exists, it will be
@@ -1098,8 +1097,8 @@ in the option file.
      pseudonymous user.
 
      2 means you did casual verification of the key. For example, this
-     could mean that you verified that the key fingerprint and checked
-     the user ID on the key against a photo ID.
+     could mean that you verified the key fingerprint and checked the
+     user ID on the key against a photo ID.
 
      3 means you did extensive verification of the key. For example,
      this could mean that you verified the key fingerprint with the
@@ -4302,31 +4301,31 @@ Index
 
 
 Tag Table:
-Node: Top762
-Node: Invoking GPG1807
-Ref: Invoking GPG-Footnote-12700
-Node: GPG Commands2765
-Node: General GPG Commands3596
-Node: Operational GPG Commands4228
-Ref: option --export-ownertrust16197
-Node: OpenPGP Key Management17994
-Node: GPG Options29859
-Node: GPG Configuration Options31083
-Ref: option --homedir39924
-Ref: option --options42479
-Node: GPG Key related Options62061
-Node: GPG Input and Output65645
-Node: OpenPGP Options71123
-Node: GPG Esoteric Options79152
-Ref: GPG Esoteric Options-Footnote-1101922
-Node: GPG Configuration102076
-Node: GPG Examples105311
-Node: Unattended Usage of GPG109646
-Node: Unattended GPG key generation110086
-Node: Specify a User ID119219
-Ref: how-to-specify-a-user-id119368
-Node: Copying124110
-Node: Option Index161743
-Node: Index203366
+Node: Top720
+Node: Invoking GPG1765
+Ref: Invoking GPG-Footnote-12658
+Node: GPG Commands2723
+Node: General GPG Commands3554
+Node: Operational GPG Commands4186
+Ref: option --export-ownertrust16144
+Node: OpenPGP Key Management17941
+Node: GPG Options29806
+Node: GPG Configuration Options31030
+Ref: option --homedir39871
+Ref: option --options42426
+Node: GPG Key related Options62003
+Node: GPG Input and Output65587
+Node: OpenPGP Options71065
+Node: GPG Esoteric Options79094
+Ref: GPG Esoteric Options-Footnote-1101864
+Node: GPG Configuration102018
+Node: GPG Examples105253
+Node: Unattended Usage of GPG109588
+Node: Unattended GPG key generation110028
+Node: Specify a User ID119161
+Ref: how-to-specify-a-user-id119310
+Node: Copying124052
+Node: Option Index161685
+Node: Index203308
 
 End Tag Table
